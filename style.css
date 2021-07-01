@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@400;700&family=Krona+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +19,8 @@ header {
 header>h1 {
     color: #25272e;
     text-align: center;
-    font-family: Asap, sans-serif;
+    /* font-family: Asap, sans-serif; */
+    font-family: 'Krona One', sans-serif;
 }
 
 .score-board {
@@ -29,7 +32,8 @@ header>h1 {
     border-radius: 4px;
     text-align: center;
     padding: 15px 20px;
-    font-family: Asap, sans-serif;
+    /* font-family: Asap, sans-serif; */
+    font-family: 'Jura', sans-serif;
     position: relative;
 }
 
@@ -37,7 +41,7 @@ header>h1 {
     background-color: #e2584d;
     color: white;
     font-size: 14px;
-    font-family: Asap, sans;
+    font-family: 'Jura', sans-serif;
     padding: 2px 10px;
 }
 
@@ -60,7 +64,7 @@ header>h1 {
 
 .result>p {
     text-align: center;
-    font-family: asap, sans-serif;
+    font-family: 'Jura', sans-serif;
     font-weight: bold;
 }
 
@@ -85,7 +89,7 @@ header>h1 {
 
 #action-message {
     text-align: center;
-    font-family: asap, sans-serif;
+    font-family: 'Jura', sans-serif;
     color: white;
     font-weight: bold;
     font-size: 30px;
