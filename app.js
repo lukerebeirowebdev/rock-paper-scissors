@@ -17,11 +17,11 @@ function getComputerChoice() {
 }
 
 function convertToWord(letter) {
-    if (letter === "r") return "Rock";
-    if (letter === "p") return "Paper";
-    if (letter === "s") return "Scissors";
-    if (letter === "l") return "Lizard";
-    if (letter === "spo") return "Spock";
+    if (letter === "r") return "rock";
+    if (letter === "p") return "paper";
+    if (letter === "s") return "scissors";
+    if (letter === "l") return "lizard";
+    if (letter === "spo") return "spock";
 
 }
 
@@ -29,26 +29,25 @@ function win(userChoice, computerChoice) {
     userScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-
-    const smallUserWord = " Users ".fontsize(5)
-    const smallCompWord = " Comp ".fontsize(5)
-    result_p.innerHTML = `${smallUserWord} ${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}${smallCompWord}. You win!`;
+    document.getElementById(userChoice).classList.add('green-glow');
+    setTimeout(function() { document.getElementById(userChoice).classList.remove('green-glow') }, 300);
+    result_p.innerHTML = `User ${convertToWord(userChoice)} beats computers ${convertToWord(computerChoice)}. You win!`;
 }
 
 function lose(userChoice, computerChoice) {
     computerScore++;
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
-    const smallUserWord = " Users ".fontsize(5)
-    const smallCompWord = " Comp ".fontsize(5)
-    result_p.innerHTML = `${smallUserWord} ${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}${smallCompWord}. You lost!`;
+    document.getElementById(userChoice).classList.add('red-glow');
+    setTimeout(function() { document.getElementById(userChoice).classList.remove('red-glow') }, 300);
+    result_p.innerHTML = `User ${convertToWord(userChoice)} loses to computers ${convertToWord(computerChoice)}. You lost!`;
 }
 
 
 function draw(userChoice, computerChoice) {
-    const smallUserWord = " Users ".fontsize(5)
-    const smallCompWord = " Comp ".fontsize(5)
-    result_p.innerHTML = `${smallUserWord} ${convertToWord(userChoice)} beats ${convertToWord(computerChoice)}${smallCompWord}. It's a draw`;
+    document.getElementById(userChoice).classList.add('gray-glow');
+    setTimeout(function() { document.getElementById(userChoice).classList.remove('gray-glow') }, 300);
+    result_p.innerHTML = ` User ${convertToWord(userChoice)} equals to computers ${convertToWord(computerChoice)}. It's a draw`;
 }
 
 
