@@ -30,8 +30,8 @@ function win(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     document.getElementById(userChoice).classList.add('green-glow');
-    setTimeout(function() { document.getElementById(userChoice).classList.remove('green-glow') }, 300);
-    result_p.innerHTML = `User ${convertToWord(userChoice)} beats computers ${convertToWord(computerChoice)}. You win!`;
+    setTimeout(function () { document.getElementById(userChoice).classList.remove('green-glow') }, 300);
+    result_p.innerHTML = `Players ${convertToWord(userChoice)} beats Computers ${convertToWord(computerChoice)}. You win!`;
 }
 
 function lose(userChoice, computerChoice) {
@@ -39,15 +39,15 @@ function lose(userChoice, computerChoice) {
     userScore_span.innerHTML = userScore;
     computerScore_span.innerHTML = computerScore;
     document.getElementById(userChoice).classList.add('red-glow');
-    setTimeout(function() { document.getElementById(userChoice).classList.remove('red-glow') }, 300);
-    result_p.innerHTML = `User ${convertToWord(userChoice)} loses to computers ${convertToWord(computerChoice)}. You lost!`;
+    setTimeout(function () { document.getElementById(userChoice).classList.remove('red-glow') }, 300);
+    result_p.innerHTML = `Computers ${convertToWord(userChoice)} beats Players ${convertToWord(computerChoice)}. You lost!`;
 }
 
 
 function draw(userChoice, computerChoice) {
     document.getElementById(userChoice).classList.add('gray-glow');
-    setTimeout(function() { document.getElementById(userChoice).classList.remove('gray-glow') }, 300);
-    result_p.innerHTML = ` User ${convertToWord(userChoice)} equals to computers ${convertToWord(computerChoice)}. It's a draw`;
+    setTimeout(function () { document.getElementById(userChoice).classList.remove('gray-glow') }, 300);
+    result_p.innerHTML = ` Players ${convertToWord(userChoice)} equals to Computers ${convertToWord(computerChoice)}. It's a draw`;
 }
 
 
@@ -88,23 +88,23 @@ function game(userChoice) {
 
 function main() {
 
-    rock_div.addEventListener('click', function() {
+    rock_div.addEventListener('click', function () {
         game("r");
     })
 
-    paper_div.addEventListener('click', function() {
+    paper_div.addEventListener('click', function () {
         game("p");
     })
 
-    scissors_div.addEventListener('click', function() {
+    scissors_div.addEventListener('click', function () {
         game("s");
     })
 
-    lizard_div.addEventListener('click', function() {
+    lizard_div.addEventListener('click', function () {
         game("l");
     })
 
-    spock_div.addEventListener('click', function() {
+    spock_div.addEventListener('click', function () {
         game("spo");
     })
 }
